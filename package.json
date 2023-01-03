@@ -1,0 +1,22 @@
+{
+  "name": "hugo-theme",
+  "version": "1.0.0",
+  "description": "hugo-theme",
+  "main": "index.js",
+  "scripts": {
+    "build-css": " npx tailwindcss -i ./learn/src/css/base.css  -o ./learn/dist/css/base.css "
+  },
+  "repository": {
+    "type": "git",
+    "url": "v-git:hugo-theme"
+  },
+  "keywords": [
+    "hugo-themes",
+    "tailwind"
+  ],
+  "author": "valjean",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.2.4"
+  }
+}
