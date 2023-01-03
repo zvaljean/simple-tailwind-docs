@@ -2,3 +2,7 @@ https://kasper.github.io/phoenix/
 https://docs.npmjs.com/cli/v7/configuring-npm/npmrc
 https://v1.docusaurus.io/docs/zh-cn/api-pages
 https://www.npmjs.com/package/sidebar-js
+
+** postcss
+    assets/css/theme.css 经过hugo 编译后，放在public中的css里，
+    resources 中有对应的缓存文件

@@ -8,7 +8,13 @@
     <title>tailwind hugo theme</title>
 
     {{- $themeCss := resources.Get "css/theme.css" | postCSS (dict "config" "./assets/css/postcss.config.js" "inlineImports" true) | resources.ExecuteAsTemplate "css/theme.css" . | minify | fingerprint "sha384" }}
-    <link rel="stylesheet" href="{{ $themeCss.Permalink }}">
+<!--    {{- if .Site.IsServer }}-->
+<!--    <link rel="stylesheet" href="{{ $themeCss.RelPermalink }}">-->
+<!--    {{ else }}-->
+    {{- $themeCss := $themeCss| minify | fingerprint | resources.PostProcess -}}
+    <link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}">
+<!--    {{ end -}}-->
+
 
 </head>
 
@@ -21,7 +27,7 @@
 <header class="flex flex-row w-screen h-header-height bg-stone-50 border-b-2 border-double rounded shadow-stone-500/50 ">
     <div class="basis-1/6">10</div>
     <div class="basis-4/6">20</div>
-    <div class="basis-1/6">30</div>
+    <div class="basis-1/6">40</div>
 </header>
 
 <main class="flex flex-row w-screen h-content-height">

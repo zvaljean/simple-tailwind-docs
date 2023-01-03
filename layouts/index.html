@@ -13,6 +13,30 @@
 </head>
 
 <body>
+<div>
+
+	{{ printf "%s:->  %#v" "themeCss.Permalink"  $themeCss.Permalink  }}
+	<hr/>
+	{{ printf "%#v" $themeCss.MediaType  }}
+	<hr/>
+	{{ printf "%#v" .Permalink }}
+	<hr/>
+	{{ printf "%#v" .Name }}
+	<!--	<hr/>-->
+<!--	{{ printf "%#v" $themeCss.Content }}  -->
+
+<!--	{{- $themeCss := resources.Get "css/theme.css" | postCSS (dict "config" "./assets/css/postcss.config.js" )  -}}-->
+<!--    {{- if .Site.IsServer }}-->
+<!--    <link rel="stylesheet" href="{{ $themeCss.RelPermalink }}">-->
+<!--    {{ else }}-->
+<!--	{{ printf "%#v" $themeCss }}-->
+<!--{{- $themeCss := $themeCss| minify | fingerprint | resources.PostProcess -}}-->
+<!--	{{ printf "%#v" $themeCss }}-->
+<!--  <a rel="stylesheet" href="{{ $themeCss.Permalink }}" integrity="{{ $themeCss.Data.Integrity }}">-->
+<!--    {{ end -}}-->
+
+</div>
+
 <!--
 1. 顶头显示
 2.
@@ -21,7 +45,7 @@
 <header class="flex flex-row w-screen h-header-height bg-stone-50 border-b-2 border-double rounded shadow-stone-500/50 ">
 	<div class="basis-1/6">10</div>
 	<div class="basis-4/6">20</div>
-	<div class="basis-1/6">30</div>
+	<div class="basis-1/6">40</div>
 </header>
 
 <main class="flex flex-row w-screen h-content-height">
