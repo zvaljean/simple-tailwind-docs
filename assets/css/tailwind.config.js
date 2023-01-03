@@ -2,15 +2,16 @@
 module.exports = {
     mode: "jit",
     content: [
-        "./asset/src/html/*.html",
-        "./asset/src/js/*.js"
+        "./themes/**/layouts/**/*.html",
+        "./content/**/layouts/**/*.html",
+        "./layouts/**/*.html",
+        "./content/**/*.html"
     ],
     theme: {
         extend: {
             height: {
                 "header-height": "var(--header-height)",
                 "footer-height": "var(--footer-height)",
-                // "content-height": "calc(100vh - var(--header-height) - var(--footer-height))",
                 "content-height": "calc(100vh - var(--header-height))",
             },
         },
@@ -22,5 +23,10 @@ module.exports = {
             roman: 'upper-roman',
         }
     },
-    plugins: [],
+    plugins: [
+        require('@tailwindcss/typography'),
+        require('@tailwindcss/forms'),
+        require('@tailwindcss/aspect-ratio'),
+        require('@tailwindcss/line-clamp'),
+    ]
 }

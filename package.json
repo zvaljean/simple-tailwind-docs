@@ -3,16 +3,14 @@
   "version": "1.0.0",
   "description": "hugo-theme",
   "scripts": {
-
-    "build-css": " npx tailwindcss -i ./asset/css/tailwind.css  -o ./asset/css/dist/style.css ",
-
+    "build-css": " npx tailwindcss -i assets/css/theme.css  -o assets/css/dist/style.css ",
     "start": "concurrently \"npm run watch:tailwind\" \"npm run watch:hugo\"",
     "build": "tailwindcss -i ./assets/css/tailwind.css -o ./assets/css/dist/style.css && hugo --minify",
     "watch:tailwind": "tailwindcss -i ./assets/css/tailwind.css -o ./assets/css/dist/style.css --watch ",
-
     "example": "concurrently \"npm run example:tailwind\" \"npm run example:hugo\"",
     "example:tailwind": "tailwindcss -c tailwind.config.example.js -i ./assets/css/tailwind.css -o ./assets/css/dist/style.css --watch",
-    "example:hugo": "hugo server --themesDir ../.."
+    "example:hugo": "hugo server -s exampleSite  --themesDir ../..",
+    "example:build": "hugo -s exampleSite  --themesDir ../.."
   },
   "repository": {
     "type": "git",
@@ -25,6 +23,14 @@
   "author": "valjean",
   "license": "ISC",
   "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^5.0.0",
+    "@tailwindcss/aspect-ratio": "^0.4.2",
+    "@tailwindcss/forms": "^0.5.3",
+    "@tailwindcss/line-clamp": "^0.4.2",
+    "@tailwindcss/typography": "^0.5.8",
+    "autoprefixer": "^10.4.13",
+    "postcss": "^8.4.20",
+    "postcss-cli": "^10.1.0",
     "tailwindcss": "^3.2.4"
   }
 }

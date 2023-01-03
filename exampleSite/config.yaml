@@ -1,3 +1,4 @@
-baseURL: 'https://example.com/'
-languageCode : 'en-us'
+baseURL: '/'
+languageCode: 'zh-CN'
 title: 'hugo theme'
+theme: hugo-theme
