@@ -1,5 +1,8 @@
 const themeDir = __dirname + '/../../';
 
+// purgecss 文档
+// https://purgecss.com/safelisting.html
+
 const purgecss = require('@fullhuman/postcss-purgecss')({
     // see https://gohugo.io/hugo-pipes/postprocess/#css-purging-with-postcss
     content: [
@@ -22,5 +25,6 @@ module.exports = {
             path: [themeDir]
         }),
         ...(process.env.HUGO_ENVIRONMENT === 'production' ? [purgecss] : [])
+        // ...(process.env.HUGO_ENVIRONMENT === 'development' ? [purgecss] : [])
     ]
 }

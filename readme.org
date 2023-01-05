@@ -1,0 +1,32 @@
+
+* hugo-theme-learn
+
+** postcss 的使用
+
+assets/css/theme.css 经过hugo 编译后，放在public中的css里，
+resources 中有对应的缓存文件
+hugo -> postcss -> twilwind
+
+** nodejs
+
+hugo 其实借助nodejs 来执行postcss, 所以可以使用其定义的相关变量比如
+~__dirname~ 
+
+** 相关主题
+- [[https://kasper.github.io/phoenix/][mac phoenix]]
+- https://docs.npmjs.com/cli/v7/configuring-npm/npmrc
+- https://www.npmjs.com/package/sidebar-js
+- [[https://v1.docusaurus.io/docs/zh-cn/api-pages][docusaurus]]
+- [[https://purgecss.com/getting-started.html][purgecss docs]]
+- [[https://developer.mozilla.org/zh-CN/docs/Learn/CSS/CSS_layout/Introduction][css layout]]
+- [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax][Spread_syntax & three dots]]
+- [[https://stackoverflow.com/questions/7729511/require-function-in-javascript][require function in js]]
+- [[https://tailwindcss.com/docs/][tailwindcss]]
+- [[https://www.bilibili.com/video/BV14J4114768/][web frontend pink tutor]]
+- [[https://gohugo.io/documentation/][hugo docs]]
+- https://gohugo.io/news/0.75.0-relnotes/
+- https://www.wangchucheng.com/zh/docs/hugo-eureka/getting-started/
+- https://github.com/hugoinaction/hugoinaction
+
+
+** 

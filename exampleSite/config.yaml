@@ -2,3 +2,7 @@ baseURL: '/'
 languageCode: 'zh-CN'
 title: 'hugo theme'
 theme: hugo-theme
+build:
+  useResourceCacheWhen: fallback
+  writeStats: true
+  noJSConfigInAssets: true
