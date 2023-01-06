@@ -1,118 +1,15 @@
-<!doctype html>
-<html lang="zh-CN">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport"
-	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>tailwind hugo theme</title>
-
-	{{- $themeCss := resources.Get "css/theme.css" | postCSS (dict "config" "./assets/css/postcss.config.js" ) -}}
-	<link rel="stylesheet" href="{{ $themeCss.Permalink }}">
-
-</head>
-
-<body>
-<div>
-
-	{{ printf "%s:->  %#v" "themeCss.Permalink"  $themeCss.Permalink  }}
-	<hr/>
-	{{ printf "%#v" $themeCss.MediaType  }}
-	<hr/>
-	{{ printf "%#v" .Permalink }}
-	<hr/>
-	{{ printf "%#v" .Name }}
-	<!--	<hr/>-->
-<!--	{{ printf "%#v" $themeCss.Content }}  -->
-
-<!--	{{- $themeCss := resources.Get "css/theme.css" | postCSS (dict "config" "./assets/css/postcss.config.js" )  -}}-->
-<!--    {{- if .Site.IsServer }}-->
-<!--    <link rel="stylesheet" href="{{ $themeCss.RelPermalink }}">-->
-<!--    {{ else }}-->
-<!--	{{ printf "%#v" $themeCss }}-->
-<!--{{- $themeCss := $themeCss| minify | fingerprint | resources.PostProcess -}}-->
-<!--	{{ printf "%#v" $themeCss }}-->
-<!--  <a rel="stylesheet" href="{{ $themeCss.Permalink }}" integrity="{{ $themeCss.Data.Integrity }}">-->
-<!--    {{ end -}}-->
-
-</div>
-
-<!--
-1. 顶头显示
-2.
--->
-
-<header class="flex flex-row w-screen h-header-height bg-stone-50 border-b-2 border-double rounded shadow-stone-500/50 ">
-	<div class="basis-1/6">10</div>
-	<div class="basis-4/6">20</div>
-	<div class="basis-1/6">40</div>
-</header>
-
-<main class="flex flex-row w-screen h-content-height">
-	<!--<main class="flex flex-row w-screen h-100 max-h-40">-->
-	<nav class="flex flex-col basis-2/12 bg-stone-50 border-r-2 ">
-		<div class="basis-4/5 overflow-y-auto">
-			<ul class="text-left list-disc pl-8">
-				<li class="py-2"><a href="#">Lorem ipsum dolor.</a></li>
-				<li class="py-2"><a href="#">Lorem ipsum dolor.</a></li>
-				<li class="py-2"><a href="#">Lorem ipsum dolor.</a></li>
-				<li class="py-2"><a href="#">Lorem ipsum dolor.</a></li>
-				<li class="py-2"><a href="#">Lorem ipsum dolor.</a></li>
-				<li class="py-2"><a href="#">Lorem ipsum dolor.</a></li>
-				<li class="py-2"><a href="#">Lorem ipsum dolor.</a></li>
-				<li class="py-2"><a href="#">Lorem ipsum dolor.</a></li>
-				<li class="py-2"><a href="#">Lorem ipsum dolor.</a></li>
-				<li class="py-2"><a href="#">Lorem ipsum dolor.</a></li>
-			</ul>
-
-		</div>
-		<div class="basis-1/5 border-t-2">
-			navigation extra
-		</div>
-	</nav>
-	<div class="basis-8/12 flex flex-col justify-start border-x-2 ">
-		<article class="grow p-2 overflow-y-auto text-left">
-
-			ratione?
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus architecto dignissimos, earum excepturi
-			labore,
-			odit officiis possimus qui reiciendis sed soluta tempora ut voluptate. Ad facere obcaecati possimus quaerat
-			ratione?
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus architecto dignissimos, earum excepturi
-			labore,
-			odit officiis possimus qui reiciendis sed soluta tempora ut voluptate. Ad facere obcaecati possimus quaerat
-			ratione?
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus architecto dignissimos, earum excepturi
-			labore,
-			odit officiis possimus qui reiciendis sed soluta tempora ut voluptate. Ad facere obcaecati possimus quaerat
-			ratione?
-
-
-		</article>
-		<div class="flex-none h-footer-height border-t-2 ">
-			<footer class="container mx-auto h-auto "> footer</footer>
-			<!--			<footer class=""> footer</footer>-->
-		</div>
-	</div>
-
-	<nav class="basis-2/12 overflow-y-auto pt-2  ">
-		<ul class="list-disc text-center ">
-			<li class="py-2 hover:bg-amber-200 "><a href="#">Lorem ipsum dolor.</a></li>
-			<li class="py-2 hover:bg-amber-200 "><a href="#">Lorem ipsum dolor.</a></li>
-			<li class="py-2 hover:bg-amber-200 "><a href="#">Lorem ipsum dolor.</a></li>
-			<li class="py-2 hover:bg-amber-200 "><a href="#">Lorem ipsum dolor.</a></li>
-			<li class="py-2 hover:bg-amber-200 "><a href="#">Lorem ipsum dolor.</a></li>
-			<li class="py-2 hover:bg-amber-200 "><a href="#">Lorem ipsum dolor.</a></li>
-			<li class="py-2 hover:bg-amber-200 "><a href="#">Lorem ipsum dolor.</a></li>
-			<li class="py-2 hover:bg-amber-200 "><a href="#">Lorem ipsum dolor.</a></li>
-			<li class="py-2 hover:bg-amber-200 "><a href="#">Lorem ipsum dolor.</a></li>
-			<li class="py-2 hover:bg-amber-200 "><a href="#">Lorem ipsum dolor.</a></li>
-		</ul>
-
-	</nav>
-
-</main>
-
-</body>
-
-</html>
+{{ define "main" }}
+<article class="grow p-2 overflow-y-auto text-left">
+    lorem ipsum dolor sit amet, consectetur adipisicing elit
+    lorem ipsum dolor sit amet, consectetur adipisicing elit
+    lorem ipsum dolor sit amet, consectetur adipisicing elit
+    lorem ipsum dolor sit amet, consectetur adipisicing elit
+    lorem ipsum dolor sit amet, consectetur adipisicing elit
+    lorem ipsum dolor sit amet, consectetur adipisicing elit
+    lorem ipsum dolor sit amet, consectetur adipisicing elit
+    lorem ipsum dolor sit amet, consectetur adipisicing elit
+    lorem ipsum dolor sit amet, consectetur adipisicing elit
+    lorem ipsum dolor sit amet, consectetur adipisicing elit
+    lorem ipsum dolor sit amet, consectetur adipisicing elit
+</article>
+{{ end }}
