@@ -5,11 +5,11 @@
 
 @tailwind base;
 
-@layer base {
-    ul {
-        @apply list-disc;
-    }
-}
+/*@layer base {*/
+/*    ul {*/
+/*        @apply list-disc;*/
+/*    }*/
+/*}*/
 
 /**
  * This injects Tailwind's component classes and any component classes

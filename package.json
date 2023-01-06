@@ -9,8 +9,8 @@
     "watch:tailwind": "tailwindcss -i ./assets/css/tailwind.css -o ./assets/css/dist/style.css --watch ",
     "example": "concurrently \"npm run example:tailwind\" \"npm run example:hugo\"",
     "example:tailwind": "tailwindcss -c tailwind.config.example.js -i ./assets/css/tailwind.css -o ./assets/css/dist/style.css --watch",
-    "example:hugo": "hugo server -s exampleSite  --themesDir ../..",
-    "example:build": "hugo -s exampleSite  --themesDir ../.."
+    "example:hugo": "hugo server  -s exampleSite  --themesDir ../.. --disableFastRender -E",
+    "example:build": "hugo -s exampleSite  --themesDir ../..  -E"
   },
   "repository": {
     "type": "git",

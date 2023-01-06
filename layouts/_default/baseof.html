@@ -8,54 +8,20 @@
 {{ partial "header.html" . }}
 
 <main class="flex flex-row w-screen h-content-height">
-    <!--<main class="flex flex-row w-screen h-100 max-h-40">-->
-    <nav class="flex flex-col basis-2/12 bg-stone-50 border-r-2 ">
-        <div class="basis-4/5 overflow-y-auto">
-            <ul class="text-left list-disc pl-8">
-                <li class="py-2"><a href="#">Lorem ipsum dolor.</a></li>
-                <li class="py-2"><a href="#">Lorem ipsum dolor.</a></li>
-                <li class="py-2"><a href="#">Lorem ipsum dolor.</a></li>
-                <li class="py-2"><a href="#">Lorem ipsum dolor.</a></li>
-                <li class="py-2"><a href="#">Lorem ipsum dolor.</a></li>
-                <li class="py-2"><a href="#">Lorem ipsum dolor.</a></li>
-                <li class="py-2"><a href="#">Lorem ipsum dolor.</a></li>
-                <li class="py-2"><a href="#">Lorem ipsum dolor.</a></li>
-                <li class="py-2"><a href="#">Lorem ipsum dolor.</a></li>
-                <li class="py-2"><a href="#">Lorem ipsum dolor.</a></li>
-            </ul>
 
-        </div>
-        <div class="basis-1/5 border-t-2">
-            navigation extra
-        </div>
-    </nav>
+    {{ partial "navigation.html" . }}
+
     <div class="basis-8/12 flex flex-col justify-start border-x-2 ">
 
-        {{- block "main" . }}
-        {{- end }}
+        {{- block "main" . }} {{- end }}
 
         {{ partial "footer.html" . }}
 
     </div>
 
-    <nav class="basis-2/12 overflow-y-auto pt-2  ">
-        <ul class="list-disc text-center ">
-            <li class="py-2 hover:bg-amber-200 "><a href="#">Lorem ipsum dolor.</a></li>
-            <li class="py-2 hover:bg-amber-200 "><a href="#">Lorem ipsum dolor.</a></li>
-            <li class="py-2 hover:bg-amber-200 "><a href="#">Lorem ipsum dolor.</a></li>
-            <li class="py-2 hover:bg-amber-200 "><a href="#">Lorem ipsum dolor.</a></li>
-            <li class="py-2 hover:bg-amber-200 "><a href="#">Lorem ipsum dolor.</a></li>
-            <li class="py-2 hover:bg-amber-200 "><a href="#">Lorem ipsum dolor.</a></li>
-            <li class="py-2 hover:bg-amber-200 "><a href="#">Lorem ipsum dolor.</a></li>
-            <li class="py-2 hover:bg-amber-200 "><a href="#">Lorem ipsum dolor.</a></li>
-            <li class="py-2 hover:bg-amber-200 "><a href="#">Lorem ipsum dolor.</a></li>
-            <li class="py-2 hover:bg-amber-200 "><a href="#">Lorem ipsum dolor.</a></li>
-        </ul>
-
-    </nav>
+    {{ partial "toc.html" . }}
 
 </main>
-
 </body>
 
 </html>
