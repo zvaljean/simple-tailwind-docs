@@ -1,27 +1,25 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+  {{ partial "head.html" . }}
 
-{{ partial "head.html" . }}
 
-<body>
+  <body>
+    {{ partial "header.html" . }}
 
-{{ partial "header.html" . }}
 
-<main class="flex flex-row w-screen h-content-height">
+    <main class="h-content-height flex w-screen flex-row">
+      {{ partial "navigation.html" . }}
 
-    {{ partial "navigation.html" . }}
 
-    <div class="basis-8/12 flex flex-col justify-start border-x-2 ">
-
-        {{- block "main" . }} {{- end }}
+      <div class="flex basis-8/12 flex-col justify-start border-x-2 ">
+        {{- block "main" . }}{{- end }}
 
         {{ partial "footer.html" . }}
 
-    </div>
+      </div>
 
-    {{ partial "toc.html" . }}
-
-</main>
-</body>
-
+      {{ partial "toc.html" . }}
+    </main>
+    <script src="https://unpkg.com/flowbite@1.6.0/dist/flowbite.min.js"></script>
+  </body>
 </html>

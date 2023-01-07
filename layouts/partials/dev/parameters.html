@@ -52,6 +52,19 @@
             <td>{{ printf "%v" .TableOfContents }}</td>
         </tr>
         <tr class="p-2 border-t">
+            <td>.Site.Pages</td>
+            <td>
+                <table>
+                    {{ range $k,$v := .Site.RegularPages }}
+                    <tr>
+                        <td class="text-right italic pr-2">{{ printf "%#v:" $k }}</td>
+                        <td>{{ printf "%#v" $v.Title }}</td>
+                    </tr>
+                    {{ end }}
+                </table>
+            </td>
+        </tr>
+        <tr class="p-2 border-t">
             <td>.Params</td>
             <td>
                 <table>

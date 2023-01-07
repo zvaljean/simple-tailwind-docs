@@ -1,17 +1,30 @@
 <!--{{- partial "dev/dev-tools.html" . -}}-->
 <!--{{- partial "dev/parameters.html" . -}}-->
-<nav class="flex flex-col basis-2/12 bg-stone-50 border-r-2 ">
-    <div class="basis-4/5 overflow-y-auto">
-        {{- range $k,$v := .Pages }}
-        <ul class="text-left border-2 bg-red-300 pl-8">
-            <li>
-                <a href="{{.RelPermalink }} " class="text-blue-500 hover:text-blue   ">{{ $v.Title }}</a>
-            </li>
+{{- partial "dev/menu.html" . -}}
+<nav class="flex basis-2/12 flex-col border-r-2 bg-stone-50 ">
+  <div class="basis-4/5 overflow-y-auto">
+    {{- range $k,$v := .Site.Menus.main }}
+    <ul class="border-2 bg-red-300 pl-8 text-left">
+      <li>
+        <a href="{{ .URL }} " class="hover:text-blue text-blue-500   "
+        >{{ $v.Title }}</a
+        >
+        {{ if $v.HasChildren }}
+        {{- range $k,$v := $v.Children }}
+        <ul class="border-2 bg-red-300 pl-8 text-left">
+          <li>
+            <a href="{{ .URL }} " class="hover:text-blue text-blue-500   "
+            >{{ $v.Title }}</a
+            >
+          </li>
         </ul>
-        {{ end -}}
-
-    </div>
-    <div class="basis-1/5 border-t-2">
-        navigation extra
-    </div>
+        {{ end }}
+        {{ end }}
+      
+      </li>
+    </ul>
+    {{ end -}}
+  
+  </div>
+  <div class="basis-1/5 border-t-2">navigation extra</div>
 </nav>

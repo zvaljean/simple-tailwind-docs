@@ -1,7 +1,9 @@
-baseURL: '/'
-languageCode: 'zh-CN'
-title: 'hugo theme'
+baseURL: http://localhost
+languageCode: zh-CN
+title: hugo theme
 theme: hugo-theme
+sectionPagesMenu: section
+
 build:
   useResourceCacheWhen: fallback
   writeStats: true

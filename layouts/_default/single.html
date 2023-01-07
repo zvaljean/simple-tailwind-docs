@@ -1,14 +1,11 @@
 {{ define "main" }}
-
-<article class="grow p-2 overflow-y-auto text-left">
-
+  <article class="grow overflow-y-auto p-2 text-left">
     <!--    {{- partial "dev/parameters.html" . -}}-->
     <h1 class="text-3xl text-red-400">{{ .Title }}</h1>
-    <hr/>
+    <hr />
     {{ .Content }}
 
+    {{ .Content }}
 
-</article>
-
-
+  </article>
 {{ end }}

@@ -1,105 +1,116 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="zh-CN">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport"
-	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>tailwind hugo theme</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>tailwind hugo theme</title>
 
-	<link rel="stylesheet" href="../../dist/css/base.css"/>
-	<!--	<script src="https://cdn.tailwindcss.com"></script>-->
-	<!--	<script>-->
-	<!--		tailwind.config = {-->
-	<!--			theme: {-->
-	<!--				extend: {-->
-	<!--					colors: {-->
-	<!--						clifford: '#da373d',-->
-	<!--					}-->
-	<!--				}-->
-	<!--			}-->
-	<!--		}-->
-	<!--	</script>-->
+    <link rel="stylesheet" href="../../dist/css/base.css" />
+    <!--	<script src="https://cdn.tailwindcss.com"></script>-->
+    <!--	<script>-->
+    <!--		tailwind.config = {-->
+    <!--			theme: {-->
+    <!--				extend: {-->
+    <!--					colors: {-->
+    <!--						clifford: '#da373d',-->
+    <!--					}-->
+    <!--				}-->
+    <!--			}-->
+    <!--		}-->
+    <!--	</script>-->
+  </head>
 
-</head>
-
-<body>
-<!--
+  <body>
+    <!--
 1. 顶头显示
 2.
 -->
 
-<header class="flex flex-row w-screen h-header-height bg-stone-50 border-b-2 border-double rounded shadow-stone-500/50 ">
-	<div class="basis-1/6">10</div>
-	<div class="basis-4/6">20</div>
-	<div class="basis-1/6">30</div>
-</header>
+    <header
+      class="h-header-height flex w-screen flex-row rounded border-b-2 border-double bg-stone-50 shadow-stone-500/50 "
+    >
+      <div class="basis-1/6">10</div>
+      <div class="basis-4/6">20</div>
+      <div class="basis-1/6">30</div>
+    </header>
 
-<main class="flex flex-row w-screen h-content-height">
-	<!--<main class="flex flex-row w-screen h-100 max-h-40">-->
-	<nav class="flex flex-col basis-2/12 bg-stone-50 border-r-2 ">
-		<div class="basis-4/5 overflow-y-auto">
-			<ul class="text-left list-disc pl-8">
-				<li class="py-2"><a href="#">Lorem ipsum dolor.</a></li>
-				<li class="py-2"><a href="#">Lorem ipsum dolor.</a></li>
-				<li class="py-2"><a href="#">Lorem ipsum dolor.</a></li>
-				<li class="py-2"><a href="#">Lorem ipsum dolor.</a></li>
-				<li class="py-2"><a href="#">Lorem ipsum dolor.</a></li>
-				<li class="py-2"><a href="#">Lorem ipsum dolor.</a></li>
-				<li class="py-2"><a href="#">Lorem ipsum dolor.</a></li>
-				<li class="py-2"><a href="#">Lorem ipsum dolor.</a></li>
-				<li class="py-2"><a href="#">Lorem ipsum dolor.</a></li>
-				<li class="py-2"><a href="#">Lorem ipsum dolor.</a></li>
-			</ul>
+    <main class="h-content-height flex w-screen flex-row">
+      <!--<main class="flex flex-row w-screen h-100 max-h-40">-->
+      <nav class="flex basis-2/12 flex-col border-r-2 bg-stone-50 ">
+        <div class="basis-4/5 overflow-y-auto">
+          <ul class="list-disc pl-8 text-left">
+            <li class="py-2"><a href="#">Lorem ipsum dolor.</a></li>
+            <li class="py-2"><a href="#">Lorem ipsum dolor.</a></li>
+            <li class="py-2"><a href="#">Lorem ipsum dolor.</a></li>
+            <li class="py-2"><a href="#">Lorem ipsum dolor.</a></li>
+            <li class="py-2"><a href="#">Lorem ipsum dolor.</a></li>
+            <li class="py-2"><a href="#">Lorem ipsum dolor.</a></li>
+            <li class="py-2"><a href="#">Lorem ipsum dolor.</a></li>
+            <li class="py-2"><a href="#">Lorem ipsum dolor.</a></li>
+            <li class="py-2"><a href="#">Lorem ipsum dolor.</a></li>
+            <li class="py-2"><a href="#">Lorem ipsum dolor.</a></li>
+          </ul>
+        </div>
+        <div class="basis-1/5 border-t-2">navigation extra</div>
+      </nav>
+      <div class="flex basis-8/12 flex-col justify-start border-x-2 ">
+        <article class="grow overflow-y-auto p-2 text-left">
+          ratione? Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          Accusamus architecto dignissimos, earum excepturi labore, odit
+          officiis possimus qui reiciendis sed soluta tempora ut voluptate. Ad
+          facere obcaecati possimus quaerat ratione? Lorem ipsum dolor sit amet,
+          consectetur adipisicing elit. Accusamus architecto dignissimos, earum
+          excepturi labore, odit officiis possimus qui reiciendis sed soluta
+          tempora ut voluptate. Ad facere obcaecati possimus quaerat ratione?
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus
+          architecto dignissimos, earum excepturi labore, odit officiis possimus
+          qui reiciendis sed soluta tempora ut voluptate. Ad facere obcaecati
+          possimus quaerat ratione?
+        </article>
+        <div class="h-footer-height flex-none border-t-2 ">
+          <footer class="container mx-auto h-auto ">footer</footer>
+          <!--			<footer class=""> footer</footer>-->
+        </div>
+      </div>
 
-		</div>
-		<div class="basis-1/5 border-t-2">
-			navigation extra
-		</div>
-	</nav>
-	<div class="basis-8/12 flex flex-col justify-start border-x-2 ">
-		<article class="grow p-2 overflow-y-auto text-left">
-
-			ratione?
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus architecto dignissimos, earum excepturi
-			labore,
-			odit officiis possimus qui reiciendis sed soluta tempora ut voluptate. Ad facere obcaecati possimus quaerat
-			ratione?
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus architecto dignissimos, earum excepturi
-			labore,
-			odit officiis possimus qui reiciendis sed soluta tempora ut voluptate. Ad facere obcaecati possimus quaerat
-			ratione?
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus architecto dignissimos, earum excepturi
-			labore,
-			odit officiis possimus qui reiciendis sed soluta tempora ut voluptate. Ad facere obcaecati possimus quaerat
-			ratione?
-
-
-		</article>
-		<div class="flex-none h-footer-height border-t-2 ">
-			<footer class="container mx-auto h-auto "> footer</footer>
-			<!--			<footer class=""> footer</footer>-->
-		</div>
-	</div>
-
-	<nav class="basis-2/12 overflow-y-auto pt-2  ">
-		<ul class="list-disc text-center ">
-			<li class="py-2 hover:bg-amber-200 "><a href="#">Lorem ipsum dolor.</a></li>
-			<li class="py-2 hover:bg-amber-200 "><a href="#">Lorem ipsum dolor.</a></li>
-			<li class="py-2 hover:bg-amber-200 "><a href="#">Lorem ipsum dolor.</a></li>
-			<li class="py-2 hover:bg-amber-200 "><a href="#">Lorem ipsum dolor.</a></li>
-			<li class="py-2 hover:bg-amber-200 "><a href="#">Lorem ipsum dolor.</a></li>
-			<li class="py-2 hover:bg-amber-200 "><a href="#">Lorem ipsum dolor.</a></li>
-			<li class="py-2 hover:bg-amber-200 "><a href="#">Lorem ipsum dolor.</a></li>
-			<li class="py-2 hover:bg-amber-200 "><a href="#">Lorem ipsum dolor.</a></li>
-			<li class="py-2 hover:bg-amber-200 "><a href="#">Lorem ipsum dolor.</a></li>
-			<li class="py-2 hover:bg-amber-200 "><a href="#">Lorem ipsum dolor.</a></li>
-		</ul>
-
-	</nav>
-
-</main>
-
-</body>
-
+      <nav class="basis-2/12 overflow-y-auto pt-2  ">
+        <ul class="list-disc text-center ">
+          <li class="py-2 hover:bg-amber-200 ">
+            <a href="#">Lorem ipsum dolor.</a>
+          </li>
+          <li class="py-2 hover:bg-amber-200 ">
+            <a href="#">Lorem ipsum dolor.</a>
+          </li>
+          <li class="py-2 hover:bg-amber-200 ">
+            <a href="#">Lorem ipsum dolor.</a>
+          </li>
+          <li class="py-2 hover:bg-amber-200 ">
+            <a href="#">Lorem ipsum dolor.</a>
+          </li>
+          <li class="py-2 hover:bg-amber-200 ">
+            <a href="#">Lorem ipsum dolor.</a>
+          </li>
+          <li class="py-2 hover:bg-amber-200 ">
+            <a href="#">Lorem ipsum dolor.</a>
+          </li>
+          <li class="py-2 hover:bg-amber-200 ">
+            <a href="#">Lorem ipsum dolor.</a>
+          </li>
+          <li class="py-2 hover:bg-amber-200 ">
+            <a href="#">Lorem ipsum dolor.</a>
+          </li>
+          <li class="py-2 hover:bg-amber-200 ">
+            <a href="#">Lorem ipsum dolor.</a>
+          </li>
+          <li class="py-2 hover:bg-amber-200 ">
+            <a href="#">Lorem ipsum dolor.</a>
+          </li>
+        </ul>
+      </nav>
+    </main>
+  </body>
 </html>
