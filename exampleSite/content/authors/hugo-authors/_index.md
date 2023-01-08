@@ -4,7 +4,6 @@ role: Example Role
 bio: Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos.
 organization:
 name: Example Organization
-url: https://example.com/
 social:
 
 - icon: envelope

@@ -8,3 +8,9 @@ build:
   useResourceCacheWhen: fallback
   writeStats: true
   noJSConfigInAssets: true
+
+#  https://gohugo.io/getting-started/configuration/#prose
+caches:
+  assets:
+    dir: :resourceDir/_gen
+    maxAge: 0
