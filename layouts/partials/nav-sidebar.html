@@ -1,0 +1,17 @@
+<!--{{- partial "dev/dev-tools.html" . -}}-->
+<!--{{- partial "dev/parameters.html" . -}}-->
+<!-- {{- partial "dev/menu.html" . -}} -->
+<div>
+  <ul class="list-disc pt-0">
+    {{ range .Site.Sections }}
+    <li class="border-b-2 text-right ">
+      <span> + </span>
+      <a href="{{ .Permalink }}">{{ .Title }}</a>
+      {{ partial "nav-sidebar-recurse.html" . }}
+    </li>
+    {{ end }}
+  
+  </ul>
+</div>
+
+<div class="h-20  border-t-2">navigation extra</div>

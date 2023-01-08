@@ -9,7 +9,7 @@
     "watch:tailwind": "tailwindcss -i ./assets/css/tailwind.css -o ./assets/css/dist/style.css --watch ",
     "example": "concurrently \"npm run example:tailwind\" \"npm run example:hugo\"",
     "example:tailwind": "tailwindcss -c tailwind.config.example.js -i ./assets/css/tailwind.css -o ./assets/css/dist/style.css --watch",
-    "example:hugo": "hugo server  -s exampleSite  --themesDir ../.. --disableFastRender -E",
+    "example:hugo": "hugo server  -s exampleSite  --themesDir ../.. --disableFastRender -E  --ignoreCache -v",
     "example:build": "hugo -s exampleSite  --themesDir ../..  -E"
   },
   "repository": {
@@ -31,6 +31,7 @@
     "autoprefixer": "^10.4.13",
     "postcss": "^8.4.20",
     "postcss-cli": "^10.1.0",
+    "tailwind-scrollbar": "^2.1.0",
     "tailwindcss": "^3.2.4"
   }
 }

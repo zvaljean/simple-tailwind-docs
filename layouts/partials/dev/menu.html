@@ -2,70 +2,104 @@
 <button
   id="parameter-menu"
   onclick="changeParameterVisibility()"
-  class="pointer-events-auto mb-2 h-8 w-8 rounded-full bg-gray-200 text-sm uppercase text-gray-700"
->
-    <span>M</span>
+  class="pointer-events-auto mb-2 h-8 w-8 rounded-full bg-gray-200 text-sm uppercase text-gray-700">
+  <span>M</span>
 </button>
 
 <div
   id="parameter-area"
-  class="fixed right-0 bottom-0 z-50 hidden h-1/3 w-full touch-auto scroll-py-4 overflow-y-auto scroll-auto border-y-8 border-white/50 bg-white/[.95] p-4"
->
-    <table class="table-collapse w-full table-auto border-gray-200 text-left">
-        <caption class="pb-2 text-left">
-            Hugo Variables for the current page.
-        </caption>
-        <thead>
-        <tr class="border-t bg-gray-100 p-2 font-semibold ">
-            <th>Variable</th>
-            <th>Value</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr class="border-t p-2">
-            <td>.Sections</td>
-            <td>
-                <table>
-                    {{ range $k,$v := .Site.Sections }}
-                    <tr>
-                        <td class="pr-2 text-right italic">{{ printf "%#v:" $k }}</td>
-                        <td>{{ printf "%#v" $v.Name }}</td>
-                    </tr>
-                    <tr>
-                        <td class="pr-2 text-right italic">{{ printf "%#v:" $k }}</td>
-                        <td>{{ printf "%#v" $v.Permalink }}</td>
-                    </tr>
-                    {{ end }}
-                </table>
-            </td>
-        </tr>
-        </tbody>
-    </table>
+  class="fixed right-0 bottom-0 z-50 hidden h-1/3 w-full touch-auto scroll-py-4 overflow-y-auto scroll-auto border-y-8 border-white/50 bg-white/[.95] p-4">
+  <table class="table-collapse w-full table-auto border-gray-200 text-left">
+    <caption class="pb-2 text-left">
+      Hugo Variables for the current page.
+    </caption>
+    <thead>
+    <tr class="border-t bg-gray-100 p-2 font-semibold ">
+      <th>Variable</th>
+      <th>Value</th>
+    </tr>
+    </thead>
+    <tbody>
+    <!--         <tr class="border-t p-2"> -->
+    <!--           <td>.Site.Menu.section</td> -->
+    <!--           <td> -->
+    <!--             <table> -->
+    <!--               {{ range $k,$v := .Site.Menus.section }} -->
+    <!--                 <tr> -->
+    <!--                   <td class="pr-2 text-right italic">{{ printf "%#v:" $k }}</td> -->
+    <!--                   <td>{{ printf "%#v" $v.Name }}</td> -->
+    <!--                 </tr> -->
+    <!--                 <tr> -->
+    <!--                   <td class="pr-2 text-right italic">.HasChildren</td> -->
+    <!--                   <td>{{ printf "%#v" $v.HasChildren }}</td> -->
+    <!--                 </tr> -->
+    <!--                 <tr> -->
+    <!--                   <td class="pr-2 text-right italic">{{ printf "%#v:" $k }}</td> -->
+    <!--                   <td>{{ printf "%#v" $v.URL }}</td> -->
+    <!--                 </tr> -->
+    <!--               {{ end }} -->
+    <!--             </table> -->
+    <!--           </td> -->
+    <!--         </tr> -->
+    <tr class="border-t p-2">
+      <td>.Site.Sections</td>
+      <td>
+        <table>
+          {{ range .Site.Sections }}
+          <tr>
+            <td class="pr-2 text-right italic"> parent.Section.Name</td>
+            <td>{{ printf "%#v" .Name }}</td>
+          </tr>
+          <!--           <tr> -->
+          <!--             <td class="pr-2 text-right italic">.Permalink</td> -->
+          <!--             <td>{{ printf "%#v" .Permalink }}</td> -->
+          <!--           </tr> -->
+          
+          {{ range .RegularPages }}
+          <tr>
+            <td class="pr-2 text-right italic">son.RegularPages.Name</td>
+            <td>{{ printf "%#v" .Name }}</td>
+          </tr>
+          {{ end }}
+          
+          {{ range .Sections }}
+          <tr>
+            <td class="pr-2 text-right italic">son.Sections.Name</td>
+            <td>{{ printf "%#v" .Name }}</td>
+          </tr>
+          {{ end }}
+          
+          {{ end }}
+        </table>
+      </td>
+    </tr>
+    </tbody>
+  </table>
 </div>
 
 <script>
-    function setParameterVisibility(data) {
-        var showParameter = data;
-        var e = document.querySelector("#parameter-area");
-        if (e.classList.contains("hidden") == showParameter) {
-            e.classList.toggle("hidden");
-        }
-        sessionStorage.setItem("showParameter", showParameter);
+  function setParameterVisibility(data) {
+    var showParameter = data;
+    var e = document.querySelector("#parameter-area");
+    if (e.classList.contains("hidden") == showParameter) {
+      e.classList.toggle("hidden");
     }
-    
-    function changeParameterVisibility() {
-        var e = document.querySelector("#parameter-area");
-        var showParameter = e.classList.contains("hidden") ? true : false;
-        setParameterVisibility(showParameter);
-    }
-    
-    function setupParameterIndicator() {
-        /* load variables from session storage */
-      var showParameter = sessionStorage.getItem("showParameter") === "true";
+    sessionStorage.setItem("showParameter", showParameter);
+  }
 
-      setParameterVisibility(showParameter);
-    }
+  function changeParameterVisibility() {
+    var e = document.querySelector("#parameter-area");
+    var showParameter = e.classList.contains("hidden") ? true : false;
+    setParameterVisibility(showParameter);
+  }
 
-    window.onload = setupParameterIndicator;
-  </script>
+  function setupParameterIndicator() {
+    /* load variables from session storage */
+    var showParameter = sessionStorage.getItem("showParameter") === "true";
+
+    setParameterVisibility(showParameter);
+  }
+
+  window.onload = setupParameterIndicator;
+</script>
 {{ end }}

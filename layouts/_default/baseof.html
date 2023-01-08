@@ -1,25 +1,32 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-  {{ partial "head.html" . }}
+{{ partial "head.html" . }}
+<header
+  class="h-header-height flex w-screen flex-row rounded border-double bg-stone-50 shadow-stone-500/50 ">
+  {{ partial "header.html" . }}
+</header>
 
-
-  <body>
-    {{ partial "header.html" . }}
-
-
-    <main class="h-content-height flex w-screen flex-row">
-      {{ partial "navigation.html" . }}
-
-
-      <div class="flex basis-8/12 flex-col justify-start border-x-2 ">
-        {{- block "main" . }}{{- end }}
-
-        {{ partial "footer.html" . }}
-
-      </div>
-
-      {{ partial "toc.html" . }}
-    </main>
-    <script src="https://unpkg.com/flowbite@1.6.0/dist/flowbite.min.js"></script>
-  </body>
+<body>
+<main class="h-main-height flex w-screen flex-row ">
+  <nav
+    class="basis-2/12 overflow-y-auto p-2 bg-stone-50 scrollbar scrollbar-thumb-gray-900 scrollbar-track-gray-100 ">
+    {{ partial "nav-sidebar.html" . }}
+  </nav>
+  
+  <div class=" basis-8/12  border-x-2 ">
+    <div class="h-content-height p-2 overflow-y-auto scrollbar scrollbar-thumb-gray-900 scrollbar-track-gray-100  ">
+      {{- block "main" . }}{{- end }}
+    </div>
+    
+    <div class="h-footer-height border-t-2">
+      {{ partial "footer.html" . }}
+    </div>
+  </div>
+  
+  <div class="basis-2/12 overflow-y-auto pt-2  ">
+    {{ partial "toc.html" . }}
+  </div>
+</main>
+<script src="https://unpkg.com/flowbite@1.6.0/dist/flowbite.min.js"></script>
+</body>
 </html>

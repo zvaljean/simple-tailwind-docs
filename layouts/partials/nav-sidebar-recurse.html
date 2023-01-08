@@ -1,0 +1,17 @@
+<ul>
+  {{ range .Sections }}
+  <li class="bg-red-200 ">
+    <span> + </span>
+    <a href="{{ .Permalink }}"> {{ .Title }}</a>
+    {{ partial "nav-sidebar-recurse.html" . }}
+  </li>
+  {{ end }}
+  
+  {{ range .RegularPages }}
+  <li class="bg-sky-400 text-center ">
+    <span> > </span>
+    <a href="{{ .Permalink }}">{{ .Title }}</a>
+  </li>
+  {{ end }}
+
+</ul>

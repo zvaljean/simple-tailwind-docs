@@ -1,9 +1,5 @@
-<!--
-1. 顶头显示
-2.
--->
-<header class="flex flex-row w-screen h-header-height bg-stone-50 border-double rounded shadow-stone-500/50 ">
-    <div class="basis-1/6">logo</div>
-    <div class="basis-4/6">tip</div>
-    <div class="basis-1/6">icon</div>
-</header>
+<div class="basis-1/6">logo</div>
+<div class="basis-4/6">
+  {{- partial "dev/menu.html" . -}}
+</div>
+<div class="basis-1/6">icon</div>
