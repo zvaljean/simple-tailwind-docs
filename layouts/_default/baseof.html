@@ -13,13 +13,14 @@
     {{ partial "nav-sidebar.html" . }}
   </nav>
   
-  <div class=" basis-8/12  border-x-2 ">
+  <div
+    class="h-full basis-8/12  border-x-2 flex-col  overflow-y-auto scrollbar scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100  ">
     <div
-      class="h-content-height p-2 overflow-y-auto scrollbar scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100  ">
+      class="grow p-2 ">
       {{- block "main" . }}{{- end }}
     </div>
     
-    <div class=" border-t-2">
+    <div class="h-footer-height border-t-2 flex-none">
       {{ partial "footer.html" . }}
     </div>
   </div>
