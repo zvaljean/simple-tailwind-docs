@@ -9,20 +9,21 @@
 <body>
 <main class="h-main-height flex w-screen flex-row ">
   <nav
-    class="basis-2/12 overflow-y-auto p-2 bg-stone-50 scrollbar scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-gray-300 ">
+    class="basis-2/12 overflow-y-auto p-2 bg-stone-50 scrollbar scrollbar-thin scrollbar-thumb-gray-100 scrollbar-track-gray-300 ">
     {{ partial "nav-sidebar.html" . }}
   </nav>
   
   <div
-    class="h-full basis-8/12  border-x-2 flex-col  overflow-y-auto scrollbar scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100  ">
-    <div
-      class="grow p-2 ">
+    class="h-full basis-8/12 border-x-2 flex flex-col overflow-y-auto scrollbar scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100">
+    
+    <div class="grow p-2">
       {{- block "main" . }}{{- end }}
     </div>
     
-    <div class="h-footer-height border-t-2 flex-none">
+    <div class="flex-none bg-red-400">
       {{ partial "footer.html" . }}
     </div>
+  
   </div>
   
   <div class="basis-2/12 overflow-y-auto pt-2  ">

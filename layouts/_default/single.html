@@ -2,5 +2,7 @@
 <!--    {{- partial "dev/parameters.html" . -}}-->
 <h1 class="text-3xl text-red-400">{{ .Title }}</h1>
 <hr />
-{{ .Content }}
+<article class="prose prose-gray">
+  {{ .Content }}
+</article>
 {{ end }}
