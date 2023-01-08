@@ -2,7 +2,15 @@
 <!--    {{- partial "dev/parameters.html" . -}}-->
 <h1 class="text-3xl text-red-400">{{ .Title }}</h1>
 <hr />
-<article class="prose prose-gray">
+<article
+  class="prose prose-zinc
+   prose-img:rounded-xl
+   prose-p:indent-2.5
+   prose-headings:bg-gray-300
+   before:prose-headings:content-['#']
+   before:prose-headings:text-sky-700
+   prose-a:text-blue-600
+    text-left">
   {{ .Content }}
 </article>
 {{ end }}
