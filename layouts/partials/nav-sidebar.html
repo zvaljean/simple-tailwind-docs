@@ -1,11 +1,10 @@
 <!--{{- partial "dev/dev-tools.html" . -}}-->
 <!--{{- partial "dev/parameters.html" . -}}-->
 <!-- {{- partial "dev/menu.html" . -}} -->
-<div>
-  <ul class="list-disc pt-0">
+<div class="prose">
+  <ul>
     {{ range .Site.Sections }}
-    <li class="border-b-2 text-right ">
-      <span> + </span>
+    <li>
       <a href="{{ .Permalink }}">{{ .Title }}</a>
       {{ partial "nav-sidebar-recurse.html" . }}
     </li>
