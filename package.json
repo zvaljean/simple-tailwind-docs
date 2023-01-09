@@ -6,11 +6,11 @@
     "build-css": " npx tailwindcss -i assets/css/theme.css  -o assets/css/dist/style.css ",
     "start": "concurrently \"npm run watch:tailwind\" \"npm run watch:hugo\"",
     "build": "tailwindcss -i ./assets/css/tailwind.css -o ./assets/css/dist/style.css && hugo --minify",
-    "watch:tailwind": "tailwindcss -i ./assets/css/tailwind.css -o ./assets/css/dist/style.css --watch ",
     "example": "concurrently \"npm run example:tailwind\" \"npm run example:hugo\"",
-    "example:tailwind": "tailwindcss -c tailwind.config.example.js -i ./assets/css/tailwind.css -o ./assets/css/dist/style.css --watch",
-    "example:hugo": "hugo server  -s exampleSite  --themesDir ../.. --disableFastRender -E  --ignoreCache -v",
-    "example:build": "hugo -s exampleSite  --themesDir ../..  -E"
+    "example:build": "hugo -s exampleSite --themesDir ../.. -E",
+    "example:tailwind": "tailwindcss -c ./assets/css/tailwind.config.js -i ./assets/css/theme.css  -o ./static/css/dist/theme-dev.css --watch",
+    "example:hugo": "hugo server -s exampleSite --themesDir ../.. -E --disableFastRender --ignoreCache --noHTTPCache --forceSyncStatic",
+    "example:run": "concurrently \"npm run example:tailwind\" \"npm run example:hugo\""
   },
   "repository": {
     "type": "git",
@@ -29,6 +29,7 @@
     "@tailwindcss/line-clamp": "^0.4.2",
     "@tailwindcss/typography": "^0.5.8",
     "autoprefixer": "^10.4.13",
+    "concurrently": "^7.6.0",
     "postcss": "^8.4.20",
     "postcss-cli": "^10.1.0",
     "tailwind-scrollbar": "^2.1.0",

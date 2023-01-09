@@ -30,9 +30,12 @@ hugo 其实借助nodejs 来执行postcss, 所以可以使用其定义的相关�
 - https://prettier.io/docs/en/options.html#bracket-line
 - https://tree.nathanfriend.io/
 
+** tailwind play
+- https://play.tailwindcss.com/
 
 ** theme
 - https://bwaycer.github.io/hugo_tutorial.hugo/extras/menus/
 - https://github.com/hugoinaction/hugoinaction
 - https://hugocodex.org/blog/creating-a-menu-with-nested-pages/
 - https://az.id.au/dev/hugo-recursive-templates/
+- https://syntax.tailwindui.com/docs/how-to-contribute

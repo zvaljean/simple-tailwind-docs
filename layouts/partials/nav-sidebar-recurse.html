@@ -1,15 +1,35 @@
-<ul>
+<ul class = "mt-1 space-y-3 pl-3 text-stone-500">
   {{ range .Sections }}
   <li>
-    <a href="{{ .Permalink }}"> {{ .Title }}</a>
+    <a class = "font-normal text-slate-500 hover:text-slate-700" href = "{{ .Permalink }}">
+      <h1 class = "font-display font-medium underline hover:underline-offset-4 "> {{ .Title | humanize }}</h1>
+    </a>
     {{ partial "nav-sidebar-recurse.html" . }}
   </li>
   {{ end }}
-  
-  {{ range .RegularPages }}
-  <li>
-    <a href="{{ .Permalink }}">{{ .Title }}</a>
+
+  {{ range $i, $v := .RegularPages }}
+  <li class = "relative">
+    <a
+      class = "block w-full pl-3.5
+        before:pointer-events-none
+        before:absolute
+        before:-left-1
+        before:top-1/2
+        before:h-1.5
+        before:w-1.5
+        before:-translate-y-1/2
+        before:rounded-full
+        text-slate-500
+        before:hidden
+        before:bg-slate-300
+        hover:text-slate-700
+        hover:before:block"
+      href = "{{ $v.Permalink }}">
+      <h3 class = "truncate"> {{ printf "%d. %s" (add $i +1) $v.Title }}</h3>
+    </a>
   </li>
   {{ end }}
+  <hr/>
 
 </ul>
