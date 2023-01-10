@@ -1,3 +1,3 @@
-module github.com/zvaljean/hugo-tailwindcss-simple-theme
+module github.com/zvaljean/hugo-theme
 
-go 1.19
+        go 1.19
