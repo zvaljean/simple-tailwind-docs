@@ -6,7 +6,8 @@
   <meta http-equiv = "X-UA-Compatible" content = "ie=edge"/>
   <title>tailwind hugo theme</title>
 
-  <link rel = "stylesheet" href = "/css/dist/theme-dev.css"/>
+  {{- $themeCss := resources.Get "/css/dist/theme-dev.css" -}}
+  <link rel = "stylesheet" type = "text/css" href = "{{ $themeCss.Permalink }}"/>
 
   <!--   {{if hugo.IsProduction}} -->
   <!--   {{- $themeCss := resources.Get "css/theme.css" | postCSS (dict "config" "./assets/css/postcss.config.js" ) -}} -->
@@ -51,6 +52,6 @@
   <!--       ] -->
   <!--     }; -->
   </script>
-  
-  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+  <script defer src = "https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>

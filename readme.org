@@ -34,6 +34,8 @@ hugo 其实借助nodejs 来执行postcss, 所以可以使用其定义的相关�
 - https://play.tailwindcss.com/
 ** add toc
 - https://dev.to/robole/add-a-table-of-contents-toc-to-your-blog-posts-99p
+** go-org
+- https://niklasfasching.github.io/go-org/#footnote-1
 ** theme
 - https://bwaycer.github.io/hugo_tutorial.hugo/extras/menus/
 - https://github.com/hugoinaction/hugoinaction

@@ -1,4 +1,4 @@
-baseURL: http://localhost
+baseURL: http://localhost/dev/
 languageCode: zh-CN
 title: Simple Tailwind Docs
 theme: simple-tailwind-docs
