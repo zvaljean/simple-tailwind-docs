@@ -1,9 +1,9 @@
 {{ define "main" }}
 <!--    {{- partial "dev/parameters.html" . -}}-->
-<h1 class = "text-3xl text-red-400 ">
-  {{ .Title }}
+<h1 class = "text-3xl text-red-400 text-center ">
+  {{ .Title |humanize }}
 </h1>
-<hr/>
+<!-- <hr/> -->
 <article
   class = "prose 
   prose-stone
@@ -19,6 +19,7 @@
   before:prose-headings:content-['§']
   before:prose-headings:text-green-500
   before:prose-headings:mr-1
+  
   before:prose-th:content-['']
   
   prose-a:text-blue-600 ">

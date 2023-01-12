@@ -16,6 +16,26 @@ module.exports = {
         "footer-height": "var(--footer-height)",
         "main-height": "calc(100vh - var(--header-height))",
         "content-height": "calc(100vh - var(--header-height) - var(--footer-height ) )"
+      },
+      typography: {
+        DEFAULT: {
+          css: {
+            // sup: {
+            //   float: "left"
+            // },
+            " li > ul ": {
+              marginTop: ".4rem",
+              marginBottom: ".4rem"
+            },
+            ".footnote-definition > sup ": {
+              float: "left"
+            },
+            " ul > li > p": {
+              marginTop: ".2rem",
+              marginBottom: ".2rem"
+            }
+          }
+        }
       }
     },
     listStyleType: {

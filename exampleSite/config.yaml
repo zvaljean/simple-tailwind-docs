@@ -1,7 +1,7 @@
 baseURL: http://localhost
 languageCode: zh-CN
-title: hugo theme
-theme: hugo-theme
+title: Simple Tailwind Docs
+theme: simple-tailwind-docs
 sectionPagesMenu: section
 
 build:

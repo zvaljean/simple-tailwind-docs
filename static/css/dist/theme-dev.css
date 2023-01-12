@@ -1193,86 +1193,30 @@ select {
 }
 
 .prose :where(.prose > :first-child):not(:where([class~="not-prose"] *)) {
-  margin-top: 0;
+    margin-top: 0;
 }
 
 .prose :where(.prose > :last-child):not(:where([class~="not-prose"] *)) {
-  margin-bottom: 0;
+    margin-bottom: 0;
 }
 
-.prose-slate {
-  --tw-prose-body: #334155;
-  --tw-prose-headings: #0f172a;
-  --tw-prose-lead: #475569;
-  --tw-prose-links: #0f172a;
-  --tw-prose-bold: #0f172a;
-  --tw-prose-counters: #64748b;
-  --tw-prose-bullets: #cbd5e1;
-  --tw-prose-hr: #e2e8f0;
-  --tw-prose-quotes: #0f172a;
-  --tw-prose-quote-borders: #e2e8f0;
-  --tw-prose-captions: #64748b;
-  --tw-prose-code: #0f172a;
-  --tw-prose-pre-code: #e2e8f0;
-  --tw-prose-pre-bg: #1e293b;
-  --tw-prose-th-borders: #cbd5e1;
-  --tw-prose-td-borders: #e2e8f0;
-  --tw-prose-invert-body: #cbd5e1;
-  --tw-prose-invert-headings: #fff;
-  --tw-prose-invert-lead: #94a3b8;
-  --tw-prose-invert-links: #fff;
-  --tw-prose-invert-bold: #fff;
-  --tw-prose-invert-counters: #94a3b8;
-  --tw-prose-invert-bullets: #475569;
-  --tw-prose-invert-hr: #334155;
-  --tw-prose-invert-quotes: #f1f5f9;
-  --tw-prose-invert-quote-borders: #334155;
-  --tw-prose-invert-captions: #94a3b8;
-  --tw-prose-invert-code: #fff;
-  --tw-prose-invert-pre-code: #cbd5e1;
-  --tw-prose-invert-pre-bg: rgb(0 0 0 / 50%);
-  --tw-prose-invert-th-borders: #475569;
-  --tw-prose-invert-td-borders: #334155;
+.prose :where( li > ul ):not(:where([class~="not-prose"] *)) {
+    margin-top: .4rem;
+    margin-bottom: .4rem;
 }
 
-.prose-zinc {
-  --tw-prose-body: #3f3f46;
-  --tw-prose-headings: #18181b;
-  --tw-prose-lead: #52525b;
-  --tw-prose-links: #18181b;
-  --tw-prose-bold: #18181b;
-  --tw-prose-counters: #71717a;
-  --tw-prose-bullets: #d4d4d8;
-  --tw-prose-hr: #e4e4e7;
-  --tw-prose-quotes: #18181b;
-  --tw-prose-quote-borders: #e4e4e7;
-  --tw-prose-captions: #71717a;
-  --tw-prose-code: #18181b;
-  --tw-prose-pre-code: #e4e4e7;
-  --tw-prose-pre-bg: #27272a;
-  --tw-prose-th-borders: #d4d4d8;
-  --tw-prose-td-borders: #e4e4e7;
-  --tw-prose-invert-body: #d4d4d8;
-  --tw-prose-invert-headings: #fff;
-  --tw-prose-invert-lead: #a1a1aa;
-  --tw-prose-invert-links: #fff;
-  --tw-prose-invert-bold: #fff;
-  --tw-prose-invert-counters: #a1a1aa;
-  --tw-prose-invert-bullets: #52525b;
-  --tw-prose-invert-hr: #3f3f46;
-  --tw-prose-invert-quotes: #f4f4f5;
-  --tw-prose-invert-quote-borders: #3f3f46;
-  --tw-prose-invert-captions: #a1a1aa;
-  --tw-prose-invert-code: #fff;
-  --tw-prose-invert-pre-code: #d4d4d8;
-  --tw-prose-invert-pre-bg: rgb(0 0 0 / 50%);
-  --tw-prose-invert-th-borders: #52525b;
-  --tw-prose-invert-td-borders: #3f3f46;
+.prose :where(.footnote-definition > sup ):not(:where([class~="not-prose"] *)) {
+    float: left;
+}
+
+.prose :where( ul > li > p):not(:where([class~="not-prose"] *)) {
+    margin-top: .2rem;
+    margin-bottom: .2rem;
 }
 
 .prose-stone {
-  --tw-prose-body: #44403c;
-  --tw-prose-headings: #1c1917;
+    --tw-prose-body: #44403c;
+    --tw-prose-headings: #1c1917;
   --tw-prose-lead: #57534e;
   --tw-prose-links: #1c1917;
   --tw-prose-bold: #1c1917;
@@ -1795,10 +1739,6 @@ select {
   font-style: italic;
 }
 
-.leading-10 {
-  line-height: 2.5rem;
-}
-
 .text-red-400 {
   --tw-text-opacity: 1;
   color: rgb(248 113 113 / var(--tw-text-opacity));
@@ -2066,10 +2006,6 @@ select {
   text-decoration-style: wavy;
 }
 
-.prose-headings\:underline-offset-4 :is(:where(h1, h2, h3, h4, h5, h6, th):not(:where([class~="not-prose"] *))) {
-  text-underline-offset: 4px;
-}
-
 .prose-headings\:underline-offset-8 :is(:where(h1, h2, h3, h4, h5, h6, th):not(:where([class~="not-prose"] *))) {
   text-underline-offset: 8px;
 }
@@ -2085,49 +2021,7 @@ select {
   color: rgb(34 197 94 / var(--tw-text-opacity));
 }
 
-.before\:prose-headings\:underline :is(:where(h1, h2, h3, h4, h5, h6, th):not(:where([class~="not-prose"] *)))::before {
-  content: var(--tw-content);
-  text-decoration-line: underline;
-}
-
-.before\:prose-headings\:underline-offset-4 :is(:where(h1, h2, h3, h4, h5, h6, th):not(:where([class~="not-prose"] *)))::before {
-  content: var(--tw-content);
-  text-underline-offset: 4px;
-}
-
 .before\:prose-headings\:content-\[\'\A7\'\] :is(:where(h1, h2, h3, h4, h5, h6, th):not(:where([class~="not-prose"] *)))::before {
-  --tw-content: '§';
-  content: var(--tw-content);
-}
-
-.before\:prose-h1\:mr-1 :is(:where(h1):not(:where([class~="not-prose"] *)))::before {
-  content: var(--tw-content);
-  margin-right: 0.25rem;
-}
-
-.before\:prose-h1\:text-green-500 :is(:where(h1):not(:where([class~="not-prose"] *)))::before {
-  content: var(--tw-content);
-  --tw-text-opacity: 1;
-  color: rgb(34 197 94 / var(--tw-text-opacity));
-}
-
-.before\:prose-h1\:content-\[\'\A7\'\] :is(:where(h1):not(:where([class~="not-prose"] *)))::before {
-  --tw-content: '§';
-  content: var(--tw-content);
-}
-
-.before\:prose-h2\:mr-1 :is(:where(h2):not(:where([class~="not-prose"] *)))::before {
-  content: var(--tw-content);
-  margin-right: 0.25rem;
-}
-
-.before\:prose-h2\:text-green-500 :is(:where(h2):not(:where([class~="not-prose"] *)))::before {
-  content: var(--tw-content);
-  --tw-text-opacity: 1;
-  color: rgb(34 197 94 / var(--tw-text-opacity));
-}
-
-.before\:prose-h2\:content-\[\'\A7\'\] :is(:where(h2):not(:where([class~="not-prose"] *)))::before {
   --tw-content: '§';
   content: var(--tw-content);
 }
@@ -2168,11 +2062,6 @@ select {
   text-decoration-line: none;
 }
 
-.before\:prose-th\:no-underline :is(:where(th):not(:where([class~="not-prose"] *)))::before {
-  content: var(--tw-content);
-  text-decoration-line: none;
-}
-
 .before\:prose-th\:content-\[\'\'\] :is(:where(th):not(:where([class~="not-prose"] *)))::before {
   --tw-content: '';
   content: var(--tw-content);
@@ -2187,19 +2076,14 @@ select {
   background-color: rgb(253 230 138 / var(--tw-bg-opacity));
 }
 
-.hover\:text-slate-900:hover {
-  --tw-text-opacity: 1;
-  color: rgb(15 23 42 / var(--tw-text-opacity));
+.hover\:text-slate-700:hover {
+    --tw-text-opacity: 1;
+    color: rgb(51 65 85 / var(--tw-text-opacity));
 }
 
 .hover\:text-slate-600:hover {
   --tw-text-opacity: 1;
   color: rgb(71 85 105 / var(--tw-text-opacity));
-}
-
-.hover\:text-slate-700:hover {
-  --tw-text-opacity: 1;
-  color: rgb(51 65 85 / var(--tw-text-opacity));
 }
 
 .hover\:underline-offset-4:hover {
