@@ -42,3 +42,5 @@ hugo 其实借助nodejs 来执行postcss, 所以可以使用其定义的相关�
 - https://hugocodex.org/blog/creating-a-menu-with-nested-pages/
 - https://az.id.au/dev/hugo-recursive-templates/
 - https://syntax.tailwindui.com/docs/how-to-contribute
+- https://getdoks.org/docs/tutorial/start-new-project/#starter-theme
+- https://jamstackthemes.dev/theme/#ssg=hugo&css=tailwind&archetype=blog
