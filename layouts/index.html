@@ -1,10 +1,5 @@
 {{ define "main" }}
 <article class="grow overflow-y-auto p-2 text-left">
-  <div x-data="{ open: false }">
-    <button @click="open = ! open">Toggle</button>
-    <div x-show="open" @click.outside="open = false">Contents...</div>
-  </div>
-  
-  index
+  {{ .Content }}
 </article>
 {{ end }}

@@ -1,27 +1,31 @@
 {{ define "main" }}
+
+{{ if .Site.IsServer }}
 {{- partial "dev/parameters.html" . -}}
-<h1 class = "text-3xl text-red-400 text-center ">
+{{ end }}
+
+<h1 class="text-3xl text-red-400 text-center ">
   {{ .Title |humanize }}
 </h1>
 <!-- <hr/> -->
 <article
-  class = "prose
+  class="prose
   prose-stone
   max-w-none
   prose-img:rounded-xl
   prose-p:indent-2.5
-  
+
   prose-headings:underline
   prose-headings:decoration-wavy
   prose-headings:underline-offset-8
   prose-th:no-underline
-  
+
   before:prose-headings:content-['§']
   before:prose-headings:text-green-500
   before:prose-headings:mr-1
-  
+
   before:prose-th:content-['']
-  
+
   prose-a:text-blue-600 ">
   {{ .Content }}
 </article>
