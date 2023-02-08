@@ -1,13 +1,13 @@
 {
-  "name": "hugo-theme",
+  "name": "simple-tailwind-docs",
   "version": "1.0.0",
-  "description": "hugo-theme",
+  "description": "simple-tailwind-docs",
   "scripts": {
     "build-css": " npx tailwindcss -i assets/css/theme.css  -o assets/css/dist/style.css ",
     "start": "concurrently \"npm run watch:tailwind\" \"npm run watch:hugo\"",
     "build": "tailwindcss -i ./assets/css/tailwind.css -o ./assets/css/dist/style.css && hugo --minify",
     "example": "concurrently \"npm run example:tailwind\" \"npm run example:hugo\"",
-    "example:build": "hugo -s exampleSite --themesDir ../.. -E",
+    "example:build": "hugo -s exampleSite --themesDir ../.. -E  --destination \"$HOME/workspace/site/hugo/\"",
     "example:tailwind": "tailwindcss -c ./assets/css/tailwind.config.js -i ./assets/css/theme.css  -o ./static/css/dist/theme-dev.css --watch",
     "example:hugo": "hugo server -s exampleSite --themesDir ../.. -E --disableFastRender --ignoreCache --noHTTPCache --forceSyncStatic",
     "example:run": "concurrently \"npm run example:tailwind\" \"npm run example:hugo\""
@@ -32,6 +32,8 @@
     "concurrently": "^7.6.0",
     "postcss": "^8.4.20",
     "postcss-cli": "^10.1.0",
+    "prettier": "^2.8.4",
+    "prettier-plugin-go-template": "0.0.13",
     "tailwind-scrollbar": "^2.1.0",
     "tailwindcss": "^3.2.4"
   }
