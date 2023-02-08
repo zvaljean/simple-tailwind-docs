@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "simple-tailwind-docs",
   "scripts": {
-    "build-css": " npx tailwindcss -i assets/css/theme.css  -o assets/css/dist/style.css ",
+    "build-css": "npx tailwindcss -c ./assets/css/tailwind.config.js -i ./assets/css/theme.css  -o ./static/css/dist/theme-dev.css",
     "start": "concurrently \"npm run watch:tailwind\" \"npm run watch:hugo\"",
     "build": "tailwindcss -i ./assets/css/tailwind.css -o ./assets/css/dist/style.css && hugo --minify",
     "example": "concurrently \"npm run example:tailwind\" \"npm run example:hugo\"",
@@ -30,7 +30,7 @@
     "@tailwindcss/typography": "^0.5.8",
     "autoprefixer": "^10.4.13",
     "concurrently": "^7.6.0",
-    "postcss": "^8.4.20",
+    "postcss": "^8.4.21",
     "postcss-cli": "^10.1.0",
     "prettier": "^2.8.4",
     "prettier-plugin-go-template": "0.0.13",

@@ -6,12 +6,13 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>tailwind hugo theme</title>
 
-  {{- $themeCss := resources.Get "/css/dist/theme-dev.css" -}}
-
   {{ if eq hugo.Environment "debug" }}
-    {{- $themeCss := resources.Get "css/theme.css" | postCSS (dict "config" "./assets/css/postcss.config.js" ) -}}
-  {{ end }}
+  {{- $themeCss := resources.Get "css/theme.css" | postCSS (dict "config" "./assets/css/postcss.config.js" ) -}}
   <link rel="stylesheet" type="text/css" href="{{ $themeCss.Permalink }}" />
+  {{ else }}
+  <link rel="stylesheet" type="text/css" href="{{- site.BaseURL -}}/css/dist/theme-dev.css" />
+  {{ end }}
+
 
   <!--  <script src="https://cdn.tailwindcss.com"></script>-->
   <!--   <script> -->

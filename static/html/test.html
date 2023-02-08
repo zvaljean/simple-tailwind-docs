@@ -1,84 +1,98 @@
-<!doctype html>
-<html lang = "zh-CN">
-<head>
-  <meta charset = "UTF-8">
-  <meta name = "viewport"
-        content = "width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <meta http-equiv = "X-UA-Compatible" content = "ie=edge">
-  <title>tailwind hugo theme</title>
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>tailwind hugo theme</title>
 
-  <link rel = "stylesheet" href = "../css/dist/theme-dev.css"/>
+    <link rel="stylesheet" href="../css/dist/theme-dev.css" />
 
-  <style>
+    <style></style>
+  </head>
 
-  </style>
+  <body class>
+    <!-- <div class = "sticky top-[4.5rem] mr-6 h-[calc(100vh-4.5rem)] overflow-y-auto py-16 pr-6"> -->
+    <!--   <nav class = "w-56"> -->
+    <!--     <ol class = "mt-4 space-y-3 text-sm"> -->
+    <!--       <li> -->
+    <!--         <h3> -->
+    <!--           <a class = "text-sky-500" href = "#">Quis vel iste dicta</a> -->
+    <!--         </h3> -->
+    <!--         <ol class = "mt-2 space-y-3 pl-5 text-slate-500 "> -->
+    <!--           <li><a class = "hover:text-slate-600 " href = "#">Et pariatur ab quas</a></li> -->
+    <!--           <li><a class = "hover:text-slate-600 " href = "#">Natus aspernatur iste</a></li> -->
+    <!--         </ol> -->
+    <!--       </li> -->
+    <!--       <li> -->
+    <!--         <h3> -->
+    <!--           <a class = "font-normal text-slate-500 hover:text-slate-700 " href = "#">Quos porro ut molestiae</a> -->
+    <!--         </h3> -->
+    <!--         <ol class = "mt-2 space-y-3 pl-5 text-slate-500 "> -->
+    <!--           <li><a class = "hover:text-slate-600 " href = "#">Voluptatem quas possimus</a></li> -->
+    <!--           <li><a class = "hover:text-slate-600 " href = "#">Id vitae minima</a></li> -->
+    <!--         </ol> -->
+    <!--       </li> -->
+    <!--       <li> -->
+    <!--         <h3> -->
+    <!--           <a class = "font-normal text-slate-500 hover:text-slate-700 " href = "#">Vitae laborum maiores</a> -->
+    <!--         </h3> -->
+    <!--         <ol class = "mt-2 space-y-3 pl-5 text-slate-500 "> -->
+    <!--           <li><a class = "hover:text-slate-600 " href = "#">Corporis exercitationem</a></li> -->
+    <!--           <li><a class = "hover:text-slate-600 " href = "#">Reprehenderit magni</a></li> -->
+    <!--         </ol> -->
+    <!--       </li> -->
+    <!--     </ol> -->
+    <!--   </nav> -->
+    <!-- </div> -->
 
-</head>
-
-<body class>
-
-<!-- <div class = "sticky top-[4.5rem] mr-6 h-[calc(100vh-4.5rem)] overflow-y-auto py-16 pr-6"> -->
-<!--   <nav class = "w-56"> -->
-<!--     <ol class = "mt-4 space-y-3 text-sm"> -->
-<!--       <li> -->
-<!--         <h3> -->
-<!--           <a class = "text-sky-500" href = "#">Quis vel iste dicta</a> -->
-<!--         </h3> -->
-<!--         <ol class = "mt-2 space-y-3 pl-5 text-slate-500 "> -->
-<!--           <li><a class = "hover:text-slate-600 " href = "#">Et pariatur ab quas</a></li> -->
-<!--           <li><a class = "hover:text-slate-600 " href = "#">Natus aspernatur iste</a></li> -->
-<!--         </ol> -->
-<!--       </li> -->
-<!--       <li> -->
-<!--         <h3> -->
-<!--           <a class = "font-normal text-slate-500 hover:text-slate-700 " href = "#">Quos porro ut molestiae</a> -->
-<!--         </h3> -->
-<!--         <ol class = "mt-2 space-y-3 pl-5 text-slate-500 "> -->
-<!--           <li><a class = "hover:text-slate-600 " href = "#">Voluptatem quas possimus</a></li> -->
-<!--           <li><a class = "hover:text-slate-600 " href = "#">Id vitae minima</a></li> -->
-<!--         </ol> -->
-<!--       </li> -->
-<!--       <li> -->
-<!--         <h3> -->
-<!--           <a class = "font-normal text-slate-500 hover:text-slate-700 " href = "#">Vitae laborum maiores</a> -->
-<!--         </h3> -->
-<!--         <ol class = "mt-2 space-y-3 pl-5 text-slate-500 "> -->
-<!--           <li><a class = "hover:text-slate-600 " href = "#">Corporis exercitationem</a></li> -->
-<!--           <li><a class = "hover:text-slate-600 " href = "#">Reprehenderit magni</a></li> -->
-<!--         </ol> -->
-<!--       </li> -->
-<!--     </ol> -->
-<!--   </nav> -->
-<!-- </div> -->
-
-<div class = "sticky top-[4.5rem] mr-6 h-[calc(80vh-4.5rem)] overflow-y-auto py-16 pr-6">
-
-  <nav id = "TableOfContents" class = "pl-8 pt-20">
-    <ul class = "mt-2 space-y-3 pl-5 text-slate-500">
-      <li><a class = "font-normal text-slate-500 hover:text-slate-700" href = "#headline-1">服务器资源</a>
-      </li>
-      <li><a class = "font-normal text-slate-500 hover:text-slate-700" href = "#headline-2">帐号资源</a>
-      </li>
-      <li><a class = "font-normal text-slate-500 hover:text-slate-700" href = "#headline-3">repos</a>
-        <ul class = "mt-2 space-y-3 pl-5 text-slate-500">
-          <li><a class = "font-normal text-slate-500 hover:text-slate-700" href = "#headline-4">git 私钥简化配置</a>
+    <div class="sticky top-[4.5rem] mr-6 h-[calc(80vh-4.5rem)] overflow-y-auto py-16 pr-6">
+      <nav id="TableOfContents" class="pl-8 pt-20">
+        <ul class="mt-2 space-y-3 pl-5 text-slate-500">
+          <li>
+            <a class="font-normal text-slate-500 hover:text-slate-700" href="#headline-1"
+              >服务器资源</a
+            >
           </li>
-          <li><a class = "font-normal text-slate-500 hover:text-slate-700" href = "#headline-5">tc_admin 管理端</a>
+          <li>
+            <a class="font-normal text-slate-500 hover:text-slate-700" href="#headline-2"
+              >帐号资源</a
+            >
           </li>
-          <li><a class = "font-normal text-slate-500 hover:text-slate-700" href = "#headline-6">tc_server 主业务逻辑</a>
-          </li>
-          <li><a class = "font-normal text-slate-500 hover:text-slate-700" href = "#headline-7">tc_proxy
-            自建代理，封装无代理的券商</a>
-          </li>
-          <li><a class = "font-normal text-slate-500 hover:text-slate-700" href = "#headline-8">tc_develop ansible
-            维护脚本</a>
+          <li>
+            <a class="font-normal text-slate-500 hover:text-slate-700" href="#headline-3">repos</a>
+            <ul class="mt-2 space-y-3 pl-5 text-slate-500">
+              <li>
+                <a class="font-normal text-slate-500 hover:text-slate-700" href="#headline-4"
+                  >git 私钥简化配置</a
+                >
+              </li>
+              <li>
+                <a class="font-normal text-slate-500 hover:text-slate-700" href="#headline-5"
+                  >tc_admin 管理端</a
+                >
+              </li>
+              <li>
+                <a class="font-normal text-slate-500 hover:text-slate-700" href="#headline-6"
+                  >tc_server 主业务逻辑</a
+                >
+              </li>
+              <li>
+                <a class="font-normal text-slate-500 hover:text-slate-700" href="#headline-7"
+                  >tc_proxy 自建代理，封装无代理的券商</a
+                >
+              </li>
+              <li>
+                <a class="font-normal text-slate-500 hover:text-slate-700" href="#headline-8"
+                  >tc_develop ansible 维护脚本</a
+                >
+              </li>
+            </ul>
           </li>
         </ul>
-      </li>
-    </ul>
-  </nav>
-</div>
-
-</body>
-
+      </nav>
+    </div>
+  </body>
 </html>
