@@ -17,7 +17,7 @@ module.exports = {
         "header-height": "var(--header-height)",
         "footer-height": "var(--footer-height)",
         "main-height": "calc(100vh - var(--header-height))",
-        "content-height": "calc(100vh - var(--header-height) - var(--footer-height ) ),
+        "content-height": "calc(100vh - var(--header-height) - var(--footer-height ) )",
       },
       typography: {
         DEFAULT: {
@@ -27,15 +27,15 @@ module.exports = {
             // },
             " li > ul ": {
               marginTop: ".4rem",
-              marginBottom: ".4rem"
+              marginBottom: ".4rem,
             },
             ".footnote-definition > sup ": {
-              float: "left"
+              float: "left,
             },
             " ul > li > p": {
               marginTop: ".2rem",
-              marginBottom: ".2rem"
-            }
+              marginBottom: ".2rem,
+            ,
           },
         },
       },
@@ -45,14 +45,14 @@ module.exports = {
       disc: "disc",
       decimal: "decimal",
       square: "square",
-      roman: "upper-roman"
-    }
+      roman: "upper-roman,
+    ,
   },
   plugins: [
     require("@tailwindcss/typography"),
     require("@tailwindcss/forms"),
     require("@tailwindcss/aspect-ratio"),
     require("@tailwindcss/line-clamp"),
-    require("tailwind-scrollbar")
-  ]
+    require("tailwind-scrollbar",
+  ,
 };

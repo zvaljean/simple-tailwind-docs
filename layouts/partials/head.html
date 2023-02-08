@@ -1,55 +1,16 @@
 <head>
-  <meta charset="UTF-8" />
+  <meta charset = "UTF-8" />
   <meta
-    name="viewport"
-    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    name = "viewport"
+    content = "width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+  <meta http-equiv = "X-UA-Compatible" content = "ie=edge" />
   <title>tailwind hugo theme</title>
 
   {{ if eq hugo.Environment "debug" }}
   {{- $themeCss := resources.Get "css/theme.css" | postCSS (dict "config" "./assets/css/postcss.config.js" ) -}}
-  <link rel="stylesheet" type="text/css" href="{{ $themeCss.Permalink }}" />
+  <link rel = "stylesheet" type = "text/css" href = "{{ $themeCss.Permalink }}" />
   {{ else }}
-  <link rel="stylesheet" type="text/css" href="{{- site.BaseURL -}}/css/dist/theme-dev.css" />
+  <link rel = "stylesheet" type = "text/css" href = "{{- site.BaseURL -}}/css/dist/theme-dev.css" />
   {{ end }}
 
-
-  <!--  <script src="https://cdn.tailwindcss.com"></script>-->
-  <!--   <script> -->
-  <!--     tailwind.config = { -->
-  <!--       mode: "jit", -->
-  <!--       content: [ -->
-  <!--         "./themes/**/layouts/**/*.html", -->
-  <!--         "./content/**/layouts/**/*.html", -->
-  <!--         "./layouts/**/*.html", -->
-  <!--         "./content/**/*.html" -->
-  <!--       ], -->
-  <!--       theme: { -->
-  <!--         extend: { -->
-  <!--           height: { -->
-  <!--             "header-height": "var(&#45;&#45;header-height)", -->
-  <!--             "footer-height": "var(&#45;&#45;footer-height)", -->
-  <!--             "main-height": "calc(100vh - var(&#45;&#45;header-height))", -->
-  <!--             "content-height": "calc(100vh - var(&#45;&#45;header-height) - var(&#45;&#45;footer-height ) )" -->
-  <!--           } -->
-  <!--         }, -->
-  <!--         listStyleType: { -->
-  <!--           none: "none", -->
-  <!--           disc: "disc", -->
-  <!--           decimal: "decimal", -->
-  <!--           square: "square", -->
-  <!--           roman: "upper-roman" -->
-  <!--         } -->
-  <!--       }, -->
-  <!--       plugins: [ -->
-  <!--         require("@tailwindcss/typography"), -->
-  <!--         require("@tailwindcss/forms"), -->
-  <!--         require("@tailwindcss/aspect-ratio"), -->
-  <!--         require("@tailwindcss/line-clamp"), -->
-  <!--         require("tailwind-scrollbar") -->
-  <!--       ] -->
-  <!--     }; -->
-  <!--  </script>-->
-
-  <!--  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>-->
 </head>
