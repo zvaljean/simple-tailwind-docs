@@ -1,11 +1,11 @@
 
-* hugo-theme-learn
+* simple-tailwind-docs  
 
 ** postcss 的使用
 
 assets/css/theme.css 经过hugo 编译后，放在public中的css里，
 resources 中有对应的缓存文件
-hugo -> postcss -> twilwind
+hugo -> postcss -> tailwind
 
 ** nodejs
 
@@ -44,5 +44,21 @@ hugo 其实借助nodejs 来执行postcss, 所以可以使用其定义的相关�
 - https://syntax.tailwindui.com/docs/how-to-contribute
 - https://getdoks.org/docs/tutorial/start-new-project/#starter-theme
 - https://jamstackthemes.dev/theme/#ssg=hugo&css=tailwind&archetype=blog
+- https://github.com/alex-shpak/hugo-book.git
+- https://github.com/wangchucheng/hugo-eureka.git
+- https://github.com/thegeeklab/hugo-geekdoc
+- https://github.com/dirkolbrich/hugo-tailwindcss-starter-theme.git
 
-- git@github.com:zvaljean/simple-tailwind-docs.git
+* issue
+** 开发时css加载问题
+新添加的css属性值时，需要postcss处理后，才能使用，所以会出现修改后，但是效果
+会改变的情况。特别时再引用第三方库时，会更加明显。故在主题开发阶段可使用如下命令
+#+begin_src shell
+  #由tailwind来监控css文件的变化，这样可以缓解该问题
+  tailwindcss -c ./assets/css/tailwind.config.js -i ./assets/css/theme.css  -o ./static/css/dist/theme-dev.css --watch
+#+end_src
+** hugo 启动主题自带的示例网站命令
+#+begin_src shell
+  hugo server -s exampleSite --themesDir ../.. -E --disableFastRender --ignoreCache --noHTTPCache --forceSyncStatic
+#+end_src
+
