@@ -22,10 +22,9 @@
       <tbody>
         <tr class="p-2 border-t">
           <td>Css</td>
-          {{/* $options := dict "config" "./assets/css/postcss.config.js" "noMap" true */}}
-          {{/* $styles := resources.Get "css/theme.css" | resources.PostCSS $options */}}
-          {{ $styles := "/css/dist/theme-dev.css" }}
-          <td>{{ printf "%#v" $styles }}</td>
+          {{- $options := dict "config" "./assets/css/postcss.config.js" "noMap" true -}}
+          {{- $styles := resources.Get "css/theme.css" | resources.PostCSS $options -}}
+          <td>{{ printf "%#v" $styles.Permalink }}</td>
         </tr>
         <tr class="p-2 border-t">
           <td>.Name</td>

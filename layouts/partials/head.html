@@ -10,7 +10,9 @@
   {{- $themeCss := resources.Get "css/theme.css" | postCSS (dict "config" "./assets/css/postcss.config.js" ) -}}
   <link rel = "stylesheet" type = "text/css" href = "{{ $themeCss.Permalink }}" />
   {{ else }}
-  <link rel = "stylesheet" type = "text/css" href = "{{- site.BaseURL -}}/css/dist/theme-dev.css" />
+  {{- $options := dict "config" "./assets/css/postcss.config.js" "noMap" true -}}
+  {{- $themeCss := resources.Get "css/theme.css" | resources.PostCSS $options | minify | fingerprint "sha384" -}}
+  <link rel = "stylesheet" type = "text/css" href = "{{ $themeCss.Permalink }}" />
   {{ end }}
 
 </head>
