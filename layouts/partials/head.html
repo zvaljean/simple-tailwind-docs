@@ -9,11 +9,11 @@
   {{- $themeCss := resources.Get "/css/dist/theme-dev.css" -}}
 
   {{ if eq hugo.Environment "debug" }}
-  {{- $themeCss := resources.Get "css/theme.css" | postCSS (dict "config" "./assets/css/postcss.config.js" ) -}}
+    {{- $themeCss := resources.Get "css/theme.css" | postCSS (dict "config" "./assets/css/postcss.config.js" ) -}}
   {{ end }}
   <link rel="stylesheet" type="text/css" href="{{ $themeCss.Permalink }}" />
 
-  <!--<script src="https://cdn.tailwindcss.com"></script> -->
+  <!--  <script src="https://cdn.tailwindcss.com"></script>-->
   <!--   <script> -->
   <!--     tailwind.config = { -->
   <!--       mode: "jit", -->
