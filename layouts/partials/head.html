@@ -1,20 +1,18 @@
 <head>
-  <meta charset = "UTF-8"/>
+  <meta charset="UTF-8" />
   <meta
-    name = "viewport"
-    content = "width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
-  <meta http-equiv = "X-UA-Compatible" content = "ie=edge"/>
+    name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>tailwind hugo theme</title>
 
   {{- $themeCss := resources.Get "/css/dist/theme-dev.css" -}}
-  <link rel = "stylesheet" type = "text/css" href = "{{ $themeCss.Permalink }}"/>
 
-  <!--   {{if hugo.IsProduction}} -->
-  <!--   {{- $themeCss := resources.Get "css/theme.css" | postCSS (dict "config" "./assets/css/postcss.config.js" ) -}} -->
-  <!--   <link rel = "stylesheet" href = "{{ $themeCss.Permalink }}"/> -->
-  <!--   {{- else -}} -->
-  <!--   <link rel = "stylesheet" href = "/css/dist/theme-dev.css"/> -->
-  <!--   {{ end }} -->
+  {{ if eq hugo.Environment "debug"}}
+  {{- $themeCss := resources.Get "css/theme.css" | postCSS (dict "config" "./assets/css/postcss.config.js" ) -}}
+  {{ end }}
+  <link rel="stylesheet" type="text/css" href="{{ $themeCss.Permalink }}" />
+
 
   <!--   <script src="https://cdn.tailwindcss.com"></script> -->
   <!--   <script> -->
@@ -53,5 +51,5 @@
   <!--     }; -->
   </script>
 
-  <script defer src = "https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
