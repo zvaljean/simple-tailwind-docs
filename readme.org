@@ -55,10 +55,76 @@ hugo 其实借助nodejs 来执行postcss, 所以可以使用其定义的相关�
 会改变的情况。特别时再引用第三方库时，会更加明显。故在主题开发阶段可使用如下命令
 #+begin_src shell
   #由tailwind来监控css文件的变化，这样可以缓解该问题
-  tailwindcss -c ./assets/css/tailwind.config.js -i ./assets/css/theme.css  -o ./static/css/dist/theme-dev.css --watch
+  tailwindcss -c ./assets/css/tailwind.config.js \
+              -i ./assets/css/theme.css  \
+              -o ./static/css/dist/theme-dev.css --watch
 #+end_src
 ** hugo 启动主题自带的示例网站命令
 #+begin_src shell
-  hugo server -s exampleSite --themesDir ../.. -E --disableFastRender --ignoreCache --noHTTPCache --forceSyncStatic
+  hugo server -s exampleSite --themesDir ../.. \
+       -E --disableFastRender
+       --ignoreCache \
+       --noHTTPCache \
+       --forceSyncStatic
 #+end_src
+
+
+* TODO hugo-theme
+** TODO muli modules
+** TODO org render opt
+*** TODO add anchor by js
+*** TODO toc change fixed 
+*** TODO 优化主题配置、编译
+*** TODO 增加一些shortcode 复制粘贴
+*** TODO toc 增加折叠
+*** TODO toc 增加内容跟随
+** DONE 找套blog的theme
+CLOSED: [2023-01-11 Wed 14:23]
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2023-01-11 Wed 14:23]
+:END:
+- gitlab.com/kaushalmodi/hugo-theme-refined
+** DONE tmux exec command in all windows
+CLOSED: [2023-01-11 Wed 14:23]
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2023-01-11 Wed 14:23]
+:END:
+** DONE menus css
+CLOSED: [2023-01-10 Tue 00:02]
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2023-01-10 Tue 00:02]
+:END:
+** DONE th css 
+CLOSED: [2023-01-10 Tue 00:03]
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2023-01-10 Tue 00:03]
+:END:
+** DONE splite template
+CLOSED: [2023-01-09 Mon 00:55]
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2023-01-09 Mon 00:55]
+:END:
+** DONE debug tools
+CLOSED: [2023-01-09 Mon 19:44]
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2023-01-09 Mon 19:44]
+:END:
+** DONE org md render html
+CLOSED: [2023-01-09 Mon 19:45]
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2023-01-09 Mon 19:45]
+:END:
+使用tailwind prose 来渲染
+** DONE prose witch
+CLOSED: [2023-01-09 Mon 18:21]
+:LOGBOOK:
+- State "DONE"       from              [2023-01-09 Mon 18:21]
+:END:
+** DONE debug style prose
+CLOSED: [2023-01-09 Mon 19:44]
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2023-01-09 Mon 19:44]
+:END:
+开发环境使用tailwind 来监视css的变化，生产则使用hugo postcss来处理
+hugo的机制，在开发中更改css后，前端变化太慢
 
