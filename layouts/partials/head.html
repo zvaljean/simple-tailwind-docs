@@ -6,15 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>{{ .Site.Title }}</title>
 
-
-  {{ if eq hugo.Environment "production" }}
-  <!--  {{- $themeCss := resources.Get "css/theme.css" | postCSS (dict "config" "./assets/css/postcss.config.js" ) -}}-->
-  <!--  <link rel="stylesheet" type="text/css" href="{{ $themeCss.Permalink }}" />-->
+  <!--  直接在blog中引用作主题时，引入css即可，减少编译麻烦-->
   <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/dist/theme-prod.css" />
-  {{ else }}
-  {{- $options := dict "config" "./assets/css/postcss.config.js" "noMap" true -}}
-  {{- $themeCss := resources.Get "css/theme.css" | resources.PostCSS $options | minify | fingerprint "sha384" -}}
-  <link rel="stylesheet" type="text/css" href="{{ $themeCss.Permalink }}" />
-  {{ end }}
 
 </head>
