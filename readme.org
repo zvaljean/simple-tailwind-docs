@@ -67,7 +67,22 @@ hugo 其实借助nodejs 来执行postcss, 所以可以使用其定义的相关�
        --noHTTPCache \
        --forceSyncStatic
 #+end_src
-
+** 本地开发
+- https://gohugo.io/hugo-modules/use-modules/
+  替代go.mod中的依赖，指引到本地
+#+begin_src yaml
+  
+title: development docs
+uglyurls : true
+module:
+  replacements: "github.com/zvaljean/simple-tailwind-docs -> ./simple-tailwind-docs"
+#+end_src
+** css引用问题
+- production 环境下
+  正式使用中，仅引用css，不会再生成新的。
+  所以直接引用 编译好的 theme-prod.css (head.html配置)
+- development
+  需要设计主题，css需要动态生成
 
 * TODO hugo-theme
 ** TODO muli modules

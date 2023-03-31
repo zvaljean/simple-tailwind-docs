@@ -6,9 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>{{ .Site.Title }}</title>
 
-  {{ if eq hugo.Environment "debug" }}
-  {{- $themeCss := resources.Get "css/theme.css" | postCSS (dict "config" "./assets/css/postcss.config.js" ) -}}
-  <link rel="stylesheet" type="text/css" href="{{ $themeCss.Permalink }}" />
+
+  {{ if eq hugo.Environment "production" }}
+  <!--  {{- $themeCss := resources.Get "css/theme.css" | postCSS (dict "config" "./assets/css/postcss.config.js" ) -}}-->
+  <!--  <link rel="stylesheet" type="text/css" href="{{ $themeCss.Permalink }}" />-->
+  <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/dist/theme-prod.css" />
   {{ else }}
   {{- $options := dict "config" "./assets/css/postcss.config.js" "noMap" true -}}
   {{- $themeCss := resources.Get "css/theme.css" | resources.PostCSS $options | minify | fingerprint "sha384" -}}
