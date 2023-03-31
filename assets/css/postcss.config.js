@@ -18,8 +18,8 @@ module.exports = {
     require("tailwindcss")(themeDir + "assets/css/tailwind.config.js"),
     require("autoprefixer")({
       path: [themeDir]
-    }),
-    ...(process.env.HUGO_ENVIRONMENT === "production" ? [purgecss] : [])
+    })
+    // ...(process.env.HUGO_ENVIRONMENT === "production" ? [purgecss] : [])
     // ...(process.env.HUGO_ENVIRONMENT === "development" ? [purgecss] : []),
   ]
 };
