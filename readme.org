@@ -68,6 +68,7 @@ hugo 其实借助nodejs 来执行postcss, 所以可以使用其定义的相关�
        --forceSyncStatic
 #+end_src
 ** 本地开发
+- hugo 直接编译，默认用的production 环境
 - https://gohugo.io/hugo-modules/use-modules/
   替代go.mod中的依赖，指引到本地
 #+begin_src yaml
